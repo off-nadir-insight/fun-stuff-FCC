@@ -18,11 +18,11 @@
 ### Goals
 The color flipper page will:
 - have a button to randomize a new color
-  - phase 1: from an array
-  - phase 2: from randomized hex value
+  - [x] phase 1: from an array
+  - [x] phase 2: from randomized hex value
 - the new random color will 
-  - display its identifier in text
-  - update the background color
+  - [x] display its identifier in text
+  - [x] update the background color
 
 ## Considerations
 - contrast behind text for reading behind any color
@@ -39,65 +39,48 @@ The color flipper page will:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
 
 ### What I learned
 
-Finally looked up how to use the favicons!
-
+- Finally looked up how to use the favicons!
 ```
 <head>
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
 ```
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+- random hex value for colors:
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+Math.floor(Math.random()*16777215).toString(16)
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
+- [storing values for a sesson](https://stackoverflow.com/questions/11609376/share-data-between-html-pages)
+```
+sessionStorage.getItem('label')
+sessionStorage.setItem('label', 'value')
+```
+
+```
+let val = sessionStorage.myValue
+sessionStorage.myValue = 'value'
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- explore enabling functionality to click on hex code to copy value
+- change color value background to dynamically change colors to contrast random color
+- refactor code to reduce duplication of pages/scripts
 
 ### Useful resources
 
 - [Markdown Guide](https://www.markdownguide.org/basic-syntax/) - Practicing correct markdown for these guides
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [w3schools CSS guides](https://www.w3schools.com/cssref/) - searching for correct CSS syntax for various stylings
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+Tyler Scott
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
-
 *Thank you to FrontendMentor for the project template*
-
-
-
